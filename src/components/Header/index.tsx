@@ -1,7 +1,5 @@
 import { Container, BackIconContainer, BackIcon, Logo} from './styles';
-
 import logoImg from '@assets/logo.png';
-import { CaretLeft } from 'phosphor-react-native';
 
 export interface HeaderProps {
     canGoBack?: boolean,
