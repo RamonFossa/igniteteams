@@ -14,9 +14,10 @@ export function NewGroup() {
         setGroupName(value);
     }
 
-    useEffect(() => {
-        groupName.length && console.log('groupName ->', groupName);
-    }, [groupName]);
+    function handleOnClickButton() {
+        console.log('clickedButton:')
+        console.log(groupName);
+    }
 
     return (
         <Container>
@@ -43,8 +44,9 @@ export function NewGroup() {
                     />
 
                     <Button
+                        disabled={groupName.length === 0}
                         title='Criar'
-                        onPress={() => console.log('AIAAI')}
+                        onPress={handleOnClickButton}
                         style={{ width: '100%' }}
                     />
                 </Form>
