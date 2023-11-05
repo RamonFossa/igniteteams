@@ -4,7 +4,7 @@ import { UsersThreeIcon } from '@components/UsersThreeIcon';
 import { Button } from '@components/Button';
 import { Hightlight } from '@components/Highlight';
 import { TextInput } from '@components/TextInput';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export function NewGroup() {
 

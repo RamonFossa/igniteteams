@@ -1,8 +1,9 @@
-import styled from 'styled-components/native';
+import styled, { css } from 'styled-components/native';
 import { Plus } from 'phosphor-react-native';
 
 export const Container = styled.View`
-    background-color: ${({ theme }) => theme.COLORS.GRAY_700};
+    ${({ theme }) => css`
+    background-color: ${theme.COLORS.GRAY_700};
     width: 100%;
     margin-bottom: 20px;
     height: 50px;
@@ -11,6 +12,7 @@ export const Container = styled.View`
     padding-vertical: 5px;
     padding-horizontal: 10px;
     border-radius: 5px;
+    `}
 `;
 
 export const Input = styled.TextInput`
@@ -28,7 +30,7 @@ export const Button = styled.TouchableOpacity`
     align-items: center;
 `;
 
-export const PlusIcon = styled(Plus).attrs(({ theme, color }) => ({
+export const PlusIcon = styled(Plus).attrs(({ color }) => ({
     size: 32,
     color: color
 }))`
