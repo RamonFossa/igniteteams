@@ -39,8 +39,9 @@ export function NewGroup() {
                     />
 
                     <TextInput
-                        placeholder='Nome da turma'
+                        placeholder='Nome da Turma'
                         onChange={handleOnChangeText}
+                        autoCorrect={false}
                     />
 
                     <Button

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button, Container, Input, PlusIcon } from './styles';
 import { useTheme } from 'styled-components';
+import { TextInputProps as RNTextInputProps } from 'react-native';
 
 interface TextInputProps {
     placeholder?: string;
@@ -8,7 +9,7 @@ interface TextInputProps {
     onChange: (text: string) => void;
 }
 
-export function TextInput({ placeholder, hasButton = false, onChange: onChangeProp }: TextInputProps) {
+export function TextInput({ placeholder, hasButton = false, onChange: onChangeProp, ...rest }: TextInputProps & RNTextInputProps) {
     const theme = useTheme();
 
     const [buttonColor, setButtonColor] = useState<string>(theme.COLORS.GRAY_300);
@@ -35,6 +36,7 @@ export function TextInput({ placeholder, hasButton = false, onChange: onChangePr
                 value={text}
                 cursorColor={theme.COLORS.GREEN_700}
                 onChangeText={onChange}
+                {...rest}
             />
 
             {
