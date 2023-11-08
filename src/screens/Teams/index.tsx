@@ -3,6 +3,7 @@ import { Container, Content } from './styles';
 import { Hightlight } from '@components/Highlight';
 import { TextInput } from '@components/TextInput';
 import { Button } from '@components/Button';
+import { ListFiltered } from '@components/ListFiltered';
 
 export function Teams() {
 
@@ -24,6 +25,8 @@ export function Teams() {
                     placeholder='Nome do participante'
                     onChange={console.log}
                 />
+
+                <ListFiltered />
 
                 <Button
                     title='Remover turma'
